@@ -1,21 +1,23 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="sport" content="sport store, sport clothes">
     <title>Sports store</title>
-    <link rel="stylesheet" href="css/store.css">
+    <link rel="stylesheet" href="store.css">
+	<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <div id="container">
+	    <div id="top-container">
 
         <div id="navbar1">
             <!-- login Button -->
             <ul>
-                <li id="login"><a href="#login.html">Login</a></li>
-                <li id="cart"><a href="#cart.html">Cart</a></li>
+                <li id="login"><a href="login.html">Login</a></li>
+                <li id="cart"><a href="cart.html">Cart</a></li>
             </ul>
 
             <!--search bar is Christopher's code-->
@@ -25,36 +27,62 @@
                     <button type="submit">Submit</button>
                 </form>
             </div>
+		
+		<!-- different icons to change color-->
+        <!-- totorial in this website: https://webdesign.tutsplus.com/tutorials/color-schemes-with-css-variables-and-javascript--cms-36989-->
+		<select name="theme-select" id="theme-select">
+			<option value="dark">Dark</option>
+			<option value="light">Light</option>
+			<option value="blue">Blue</option>
+		</select>
         </div>
 
         <!-- second nav bar -->
         <div id="navbar2">
             <ul>
                 <li><a href="home.html">Home</a></li>
-                <li><a href="clothing.php">Clothing</a></li>
-                <li><a href="footwear.html">Footwear</a></li>
-                <li><a href="equipment.html">Equipment</a></li>
+                <div class="dropdown">
+				<button class="dropbtn"><li>Clothing</li></button>
+					<div class="dropdown-content">
+						<a href="tops.html">Tops</a>
+						<a href="bottoms.html">Bottoms</a>
+						<a href="clothing.php">All clothings</a>
+						<!--
+						<a href="shorts">Shorts</a>
+						<a href="jerceys">Jerceys</a>
+						<a href="Jackets">Jackets</a>-->
+					</div>
+					</div>
+					 
+				<div class="dropdown">
+				<button class="dropbtn"><li>Footwear</li></button>
+					<div class="dropdown-content">
+						<a href="indoorfootwear.html">Indoor</a>
+						<a href="outdoorfootwear.html">Outdoor</a>
+						<a href="footwear.html">All Footwears</a>
+					</div>
+					
+				</div>
+				<div class="dropdown">
+				<button class="dropbtn"><li>Equipment</li></button>
+					<div class="dropdown-content">
+						<a href="soccerball.html">Soccer Balls</a>
+						<a href="gloves.html">Gloves</a>
+						<a href="equipment">All Equipments</a>
+					</div>
+				</div>
                 <li><a href="fanclothing.html">Fans Clothing</a></li>
                 <li><a href="onsale.html" style="color: red">On Sale</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
+			
         </div>
-
-        <!-- different icons to change color-->
-        <!-- totorial in this website:
-		https://webdesign.tutsplus.com/tutorials/color-schemes-with-css-variables-and-javascript--cms-36989-->
-
-        <select name="theme-select" id="theme-select">
-			<option value="light">Light</option>
-			<option value="dark">Dark</option>
-			<option value="blue">Blue</option>
-		</select>
+		
         <!--end of upper template-->
-
 
         <!--image on the screen-->
         <!--License of the image: Free for commercial use, No attribution required-->
-        <div id="image">
+		<div id="image">
             <img src="https://cdn.pixabay.com/photo/2018/09/30/22/12/silhouette-3714836_1280.png" alt="football player png">
         </div>
 
@@ -62,97 +90,120 @@
         <div id="content">
             <h2>Soccer World</h2>
         </div>
+	</div>
+		<!-- Slideshow container -->
+	<div class="slideshow-container">
 
-        <!-- 2 lines undereath the soccer world text -->
-        <div id="line1"></div>
-        <div id="line2"></div>
+		<!-- Full-width images with number and caption text -->
+			<div class="mySlides fade">
+				<div class="numbertext">1 / 3</div>
+				<img src="https://cdn.pixabay.com/photo/2016/05/20/21/57/football-1406106_1280.jpg">
+			</div>
+
+			<div class="mySlides fade">
+				<div class="numbertext">2 / 3</div>
+				<img src="https://cdn.pixabay.com/photo/2014/10/14/20/24/football-488714_1280.jpg" >
+
+			</div>
+
+			<div class="mySlides fade">
+				<div class="numbertext">3 / 3</div>
+				<img src="https://cdn.pixabay.com/photo/2016/11/29/02/05/audience-1866738_1280.jpg">
+
+			</div> <br>
+
+		<!-- The dots/circles -->
+		<div style="text-align:center">
+			<span class="dot"></span>
+			<span class="dot"></span>
+			<span class="dot"></span>
+		</div>
+	</div>
+<!--end of slideshow-->
+
+<br/><br/><br/>
 
         <section class="main-container">
-
             <div class="main-row">
-                <hr/>
+			
                 <!--License of the images: Free for commercial use, No attribution required-->
-
                 <div class="column">
-                    <a href="#clothing.html"> <img class="resize" src="https://cdn.pixabay.com/photo/2015/06/12/18/26/team-807300_1280.jpg" alt="Clothing" /></a>
-                    <h3><a href="#clothing.html">Clothing</a></h3>
+                    <a href="clothing.php"> <img src="https://cdn.pixabay.com/photo/2015/06/12/18/26/team-807300_1280.jpg" alt="Clothing" /></a>
+                    <h3><a href="clothing.html">Clothing</a></h3>
                     <p>Dominate the field with your jerseys</p>
                 </div>
 
                 <div class="column">
-                    <a href="#footwear.html"> <img class="resize" src="https://cdn.pixabay.com/photo/2012/02/29/15/44/football-19115_1280.jpg" alt="Footwear" /></a>
-                    <h3><a href="#footwear.html">Footwear</a></h3>
+                    <a href="footwear.html"> <img src="https://cdn.pixabay.com/photo/2012/02/29/15/44/football-19115_1280.jpg" alt="Footwear" /></a>
+                    <h3><a href="footwear.html">Footwear</a></h3>
                     <p>Run the game with high-performance footwear</p>
-                </div><br/>
-                <hr/>
+                </div>
 
                 <div class="column">
-                    <a href="#fanclothing.html"> <img class="resize" src="https://cdn.pixabay.com/photo/2020/08/02/09/25/jersey-5457156_1280.jpg" alt="Fan Wear" /></a>
-                    <h3><a href="#fanclothing.html">Fan Clothing</a></h3>
+                    <a href="fanclothing.html"> <img src="https://cdn.pixabay.com/photo/2020/08/02/09/25/jersey-5457156_1280.jpg" alt="Fan Clothing" /></a>
+                    <h3><a href="fanclothing.html">Fan Clothing</a></h3>
                     <p>Costumize your clothes based on your favorite team</p>
                 </div>
 
                 <div class="column">
-                    <a href="#equipment.html"> <img class="resize" src="https://cdn.pixabay.com/photo/2018/12/23/17/59/sport-3891579_1280.jpg" alt="Equipment" /></a>
-                    <h3><a href="#equipment.html">Equipment</a></h3>
+                    <a href="equipment.html"> <img src="https://cdn.pixabay.com/photo/2018/12/23/17/59/sport-3891579_1280.jpg" alt="Equipment" /></a>
+                    <h3><a href="equipment.html">Equipment</a></h3>
                     <p>Take your game to the next level with the best equipment</p>
                 </div>
-                <hr/>
+
 
                 <div class="column">
-                    <a href="#about.html"> <img class="resize" src="https://cdn.pixabay.com/photo/2016/03/11/08/02/usa-1249880_1280.jpg" alt="About" /></a>
-                    <h3><a href="#about.html">About Us</a></h3>
+                    <a href="about.html"> <img src="https://cdn.pixabay.com/photo/2016/03/11/08/02/usa-1249880_1280.jpg" alt="About" /></a>
+                    <h3><a href="about.html">About Us</a></h3>
                     <p>Learn more about us and our business</p>
                 </div>
 
                 <div class="column">
-                    <a href="#onsale.html"> <img class="resize" src="https://cdn.pixabay.com/photo/2015/10/08/16/16/click-978042_1280.png" alt="On Sale" /></a>
-                    <h3><a href="#onsale.html" data-touchpoint="home">On Sale</a></h3>
+                    <a href="onsale.html"> <img src="https://cdn.pixabay.com/photo/2015/10/08/16/16/click-978042_1280.png" alt="On Sale" /></a>
+                    <h3><a href="onsale.html" data-touchpoint="home">On Sale</a></h3>
                     <p>Benefit from the the best sales in the store</p>
-                </div>
-                <hr/>
-
-                <br/><br/>
-
-
-
-                <div class="main-row">
-                    <h1>Say something about soccer</h1>
-                </div>
-                <div class="column">
+                              
+				</div>
+			</section>
+			<br/><hr class="solid"><br/>
+			
+			<section class="bottom-container">
+                <div class="bottom-row">
+                    <h1> Say something about soccer</h1>
+				</div>
+                <div class="column1">
                     <h2>Is soccer better than football?</h2>
                     <p>. Football and the NFL rules can be overwhelming and can be too much for viewers</p>
                     <p>. You can play soccer anywhere and you might not need a soccer field to play it</p>
                     <p>. Unlike football, there is more tactical freedom in soccer.</p>
                 </div>
-                <div class="column">
+                <div class="column1">
                     <h2>Fun Facts about Soccer you may not know!</h2>
                     <p>. One of the first versions of the soccer goes back to 3,000 years ago and no one exactly knows when was created.</p>
                     <p>. In formal form, soccer was formed when several clubs formed the Football Association and it was in England about 150 years ago.</p>
                     <p>. Soccer is the most popular game in the world.</p>
                 </div>
 
-
         </section>
-
+	
+			<hr class="solid">
         <!--start of footer section-->
-
-        <hr class="solid">
-
         <footer class="footer">
+
             <div class="footer-column">
+
                 <ul>
                     <b>ABOUT US</b>
                     <li>
-                        <a href="#about.html">News</a>
+                        <a href="about.html">News</a>
                     </li>
 
                     <li>
-                        <a href="#about.html">Send us Feedback</a>
+                        <a href="about.html">Send us Feedback</a>
                     </li>
 
                     <li>
-                        <a href="#about.html">Contact us</a>
+                        <a href="about.html">Contact us</a>
                     </li>
                 </ul>
             </div>
@@ -161,15 +212,15 @@
                 <ul>
                     <b>Collection</b>
                     <li>
-                        <a href="#clothing.html">Clothing</a>
+                        <a href="clothing.php">Clothing</a>
                     </li>
 
                     <li>
-                        <a href="#footwear.html">Footwear</a>
+                        <a href="footwear.html">Footwear</a>
                     </li>
 
                     <li>
-                        <a href="#equipment.html">Equipment</a>
+                        <a href="equipment.html">Equipment</a>
                     </li>
                 </ul>
             </div>
@@ -178,18 +229,18 @@
                 <ul>
                     <b>Deals</b>
                     <li>
-                        <a href="#onsale.html">Clearance / On sale products</a>
+                        <a href="onsale.html">Clearance / On sale products</a>
                     </li>
 
                     <li>
-                        <a href="#fanwear.html">Shop based on your fav team</a>
+                        <a href="fanclothing.html">Shop based on your fav team</a>
                     </li>
                 </ul>
             </div>
 
             <div class="footer-column">
-                <ul>
-                    <b>Locations</b>
+				<ul>
+                 <b>Locations</b>
 
                     <li>
                         <a href="https://goo.gl/maps/LvZYW29Pmsb3J4ZK7">Toronto</a>
@@ -204,22 +255,22 @@
                     </li>
                 </ul>
             </div>
+		</footer>
+		<hr class="solid">
+		<br/>
+        <div class="copyright">&copy; Soccer World</div><br/>
 
-            <br/>
-            <hr class="solid">
+	</div>
+</div>
 
-            <br/>
-            <div class="copyright">Copyright</div><br/>
-            </div>
-    </div>
-    <!--javascript to make the dropdown work-->
+    <!--javascript to make the option of the dropdown theme work-->
     <script>
         const setTheme = theme => document.documentElement.className = theme;
         document.getElementById('theme-select').addEventListener('change', function() {
             setTheme(this.value);
         });
     </script>
+	<script src="slideshow.js"></script>
 
 </body>
-
 </html>
